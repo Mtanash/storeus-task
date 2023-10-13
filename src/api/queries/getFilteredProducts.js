@@ -9,13 +9,9 @@ import axiosInstance from "../axios/axiosInstance";
  * @returns {Promise<Array>} - A promise that resolves to an array of filtered products.
  */
 const getFilteredProducts = async (filter) => {
-  const filterString = Object.keys(filter)
-    .map((key) => {
-      return `${key}=${filter[key]}`;
-    })
-    .join("&");
-
-  const response = await axiosInstance.get(`/products?${filterString}`);
+  const response = await axiosInstance.get(
+    `/products${filter ? `?${filter}` : ""}`
+  );
 
   return response.data;
 };

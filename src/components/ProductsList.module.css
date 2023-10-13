@@ -1,3 +1,19 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 6px 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
 .productsList {
   display: flex;
   flex-wrap: wrap;
@@ -6,4 +22,20 @@
   padding: 0 15px;
   gap: 24px;
   margin-bottom: 24px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  > label {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.select {
+  width: 150px;
 }

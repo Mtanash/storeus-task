@@ -1,5 +1,4 @@
 .cartIconButtonContainer {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,7 +7,6 @@
 }
 
 .cartButton {
-  /* background-color: #ff6b6b; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,8 +50,7 @@
 
 .cartDropdown {
   position: absolute;
-  top: 40px;
-  right: 0;
+  top: 60px;
   width: 300px;
   height: 400px;
   background-color: #fff;

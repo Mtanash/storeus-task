@@ -16,7 +16,7 @@ const TopProductsCarousel = () => {
     data: products,
     error,
     isFetching,
-  } = useRequest(getFilteredProducts({ label: "Best Seller" }));
+  } = useRequest(getFilteredProducts("label=Best Seller"));
 
   if (error) return <div>Error...</div>;
 
