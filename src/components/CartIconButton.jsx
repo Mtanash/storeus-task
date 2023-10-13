@@ -1,11 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { getCartTotalItems, getCartTotalPrice } from "../helpers/cart";
 import useCartStore from "../stores/cartStore";
 import styles from "./CartIconButton.module.css";
 
 const CartIconButton = () => {
+  const cartDropDownRef = useRef(null);
   const [cartDropdownIsOpen, toggleCartDropdown] = useState(false);
 
   const { items, removeProductFromCart } = useCartStore((state) => ({
@@ -27,6 +28,23 @@ const CartIconButton = () => {
     toggleCartDropdown(!cartDropdownIsOpen);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        cartDropDownRef.current &&
+        !cartDropDownRef.current.contains(e.target)
+      ) {
+        toggleCartDropdown(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className={styles.cartIconButtonContainer}>
       <button className={styles.cartButton} onClick={handleCartButtonClick}>
@@ -45,6 +63,7 @@ const CartIconButton = () => {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.1 }}
             className={styles.cartDropdown}
+            ref={cartDropDownRef}
           >
             <div className={styles.cartDropdownHeader}>
               <h3 className={styles.cartDropdownTitle}>Shopping Cart</h3>
