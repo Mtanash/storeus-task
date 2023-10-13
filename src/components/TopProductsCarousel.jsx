@@ -1,4 +1,4 @@
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import getFilteredProducts from "../api/queries/getFilteredProducts";
 import useRequest from "../hooks/useRequest";
@@ -7,7 +7,6 @@ import styles from "./TopProductsCarousel.module.css";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 import ProductCard from "./ProductCard";
 import Container from "./UI/Container";
 
@@ -28,10 +27,9 @@ const TopProductsCarousel = () => {
         <h2 className={styles.topProductsCarouselTitle}>Top Products</h2>
 
         <Swiper
-          modules={[Pagination, Navigation]}
+          modules={[Navigation]}
           spaceBetween={10}
           slidesPerView={3}
-          pagination={{ clickable: true }}
           navigation={true}
           loop
           breakpoints={{
@@ -45,7 +43,11 @@ const TopProductsCarousel = () => {
         >
           {products?.map((product) => (
             <SwiperSlide key={product.id}>
-              <ProductCard product={product} displayLabel />
+              <ProductCard
+                product={product}
+                displayLabel
+                style={{ margin: "0 auto" }}
+              />
             </SwiperSlide>
           ))}
         </Swiper>

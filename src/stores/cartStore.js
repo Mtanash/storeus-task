@@ -27,19 +27,23 @@ const useCartStore = create((set) => ({
       }
       return { items: [...state.items] };
     }),
+  removeProductFromCart: (product) =>
+    set((state) => ({
+      items: state.items.filter((i) => i.product.id !== product.id),
+    })),
   clearCart: () => set({ items: [] }),
   getCartTotal: () =>
-    set((state) => {
-      return state.items.reduce(
+    useCartStore
+      .getState()
+      .items.reduce(
         (total, item) => total + item.product.price * item.quantity,
         0
-      );
-    }),
+      ),
 
   getCartCount: () =>
-    set((state) => {
-      return state.items.reduce((total, item) => total + item.quantity, 0);
-    }),
+    useCartStore
+      .getState()
+      .items.reduce((total, item) => total + item.quantity, 0),
 }));
 
 export default useCartStore;

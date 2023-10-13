@@ -1,12 +1,22 @@
 import PropTypes from "prop-types";
 import { BiCartDownload } from "react-icons/bi";
+import toaster from "../helpers/toaster";
 import truncateString from "../helpers/truncateString";
+import useCartStore from "../stores/cartStore";
 import styles from "./ProductCard.module.css";
 
-const ProductCard = ({ product, displayLabel = false }) => {
+const ProductCard = ({ product, displayLabel = false, style }) => {
+  const addToCart = useCartStore((state) => state.addToCart);
+
   const { name, price, image, label, description } = product;
+
+  const handleAddToCartClick = () => {
+    addToCart(product);
+    toaster.success("Product added to cart");
+  };
+
   return (
-    <div className={styles.productContainer}>
+    <div className={styles.productContainer} style={style}>
       {label && displayLabel && (
         <div className={styles.productLabel}>{label}</div>
       )}
@@ -26,7 +36,7 @@ const ProductCard = ({ product, displayLabel = false }) => {
       </div>
 
       <div className={styles.productActions}>
-        <button className={styles.addToCardBtn}>
+        <button className={styles.addToCardBtn} onClick={handleAddToCartClick}>
           <BiCartDownload className={styles.addToCardIcon} />
           Add to Cart
         </button>
@@ -46,4 +56,5 @@ ProductCard.propTypes = {
     description: PropTypes.string.isRequired,
   }).isRequired,
   displayLabel: PropTypes.bool,
+  style: PropTypes.object,
 };

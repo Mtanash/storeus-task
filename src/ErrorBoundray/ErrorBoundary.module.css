@@ -1,0 +1,29 @@
+.errorBoundray {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.errorBoundrayMessage {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--main-text-color);
+
+  > a {
+    color: var(--main-btn-clr);
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.4rem;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 1.2rem;
+  }
+}
