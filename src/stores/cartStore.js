@@ -1,9 +1,11 @@
 import { create } from "zustand";
+import subscribeToCart from "../middleware/cartListener";
 
 const useCartStore = create((set) => ({
   // items will be {product, quantity}
-
-  items: [],
+  items: localStorage.getItem("cart-items")
+    ? JSON.parse(localStorage.getItem("cart-items"))
+    : [],
   addToCart: (product) =>
     set((state) => {
       const item = state.items.find((i) => i.product.id === product.id);
@@ -39,11 +41,11 @@ const useCartStore = create((set) => ({
         (total, item) => total + item.product.price * item.quantity,
         0
       ),
-
   getCartCount: () =>
     useCartStore
       .getState()
       .items.reduce((total, item) => total + item.quantity, 0),
 }));
-
 export default useCartStore;
+
+subscribeToCart(useCartStore);
