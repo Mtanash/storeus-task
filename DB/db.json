@@ -1,0 +1,155 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Elegant Smartphone",
+      "price": 299.99,
+      "image": "https://picsum.photos/300/200?image=101",
+      "label": "New Arrival",
+      "description": "Stay connected with this state-of-the-art smartphone. Featuring cutting-edge technology and a sleek design, it's perfect for both work and play.",
+      "category": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Stylish T-Shirt",
+      "price": 19.99,
+      "image": "https://picsum.photos/300/200?image=102",
+      "label": "Best Seller",
+      "description": "Upgrade your wardrobe with our stylish t-shirt. Made from high-quality materials, it offers both comfort and fashion in one package.",
+      "category": "Clothing"
+    },
+    {
+      "id": 3,
+      "name": "Cozy Throw Pillow",
+      "price": 9.99,
+      "image": "https://picsum.photos/300/200?image=103",
+      "label": "On Sale",
+      "description": "Add a touch of comfort to your home with our cozy throw pillow. It's perfect for snuggling up on the couch or adding style to your bedroom.",
+      "category": "Home & Garden"
+    },
+    {
+      "id": 4,
+      "name": "Outdoor Adventure Gear",
+      "price": 149.99,
+      "image": "https://picsum.photos/300/200?image=104",
+      "label": "Limited Stock",
+      "description": "Gear up for your next outdoor adventure with our high-quality outdoor gear. It's designed to withstand the toughest challenges and keep you prepared.",
+      "category": "Sports & Outdoors"
+    },
+    {
+      "id": 5,
+      "name": "Sleek Backpack",
+      "price": 79.99,
+      "image": "https://picsum.photos/300/200",
+      "label": "New Arrival",
+      "description": "Carry your essentials in style with our sleek backpack. It's made from durable materials and features a modern design that will never go out of fashion.",
+      "category": "Sports & Outdoors"
+    },
+    {
+      "id": 6,
+      "name": "Stylish Watch",
+      "price": 299.99,
+      "image": "https://picsum.photos/300/200?image=106",
+      "label": "Best Seller",
+      "description": "Stay on time with our stylish watch. It's made from high-quality materials and features a sleek design that will never go out of style.",
+      "category": "Jewelry & Watches"
+    },
+    {
+      "id": 7,
+      "name": "Elegant Earrings",
+      "price": 49.99,
+      "image": "https://picsum.photos/300/200?image=107",
+      "label": "On Sale",
+      "description": "Add a touch of elegance to your outfit with our elegant earrings. They're made from high-quality materials and feature a modern design that will never go out of style.",
+      "category": "Jewelry & Watches"
+    },
+    {
+      "id": 8,
+      "name": "Stylish Sunglasses",
+      "price": 99.99,
+      "image": "https://picsum.photos/300/200?image=108",
+      "label": "Limited Stock",
+      "description": "Protect your eyes from the sun with our stylish sunglasses. They're made from high-quality materials and feature a modern design that will never go out of style.",
+      "category": "Jewelry & Watches"
+    },
+    {
+      "id": 9,
+      "name": "Elegant Necklace",
+      "price": 149.99,
+      "image": "https://picsum.photos/300/200?image=109",
+      "label": "New Arrival",
+      "description": "Add a touch of elegance to your outfit with our elegant necklace. It's made from high-quality materials and features a modern design that will never go out of style.",
+      "category": "Jewelry & Watches"
+    },
+    {
+      "id": 10,
+      "name": "Stylish Bracelet",
+      "price": 79.99,
+      "image": "https://picsum.photos/300/200?image=110",
+      "label": "Best Seller",
+      "description": "Add a touch of elegance to your outfit with our stylish bracelet. It's made from high-quality materials and features a modern design that will never go out of style.",
+      "category": "Jewelry & Watches"
+    },
+    {
+      "id": 11,
+      "name": "Elegant Ring",
+      "price": 49.99,
+      "image": "https://picsum.photos/300/200?image=111",
+      "label": "On Sale",
+      "description": "Add a touch of elegance to your outfit with our elegant ring. It's made from high-quality materials and features a modern design that will never go out of style.",
+      "category": "Jewelry & Watches"
+    },
+    {
+      "id": 12,
+      "name": "Stylish Hat",
+      "price": 29.99,
+      "image": "https://picsum.photos/300/200?image=112",
+      "label": "Limited Stock",
+      "description": "Add a touch of style to your outfit with our stylish hat. It's made from high-quality materials and features a modern design that will never go out of style.",
+      "category": "Clothing"
+    },
+    {
+      "id": 13,
+      "name": "Elegant Dress",
+      "price": 149.99,
+      "image": "https://picsum.photos/300/200?image=113",
+      "label": "New Arrival",
+      "description": "Add a touch of elegance to your outfit with our elegant dress. It's made from high-quality materials and features a modern design that will never go out of style.",
+      "category": "Clothing"
+    },
+    {
+      "id": 14,
+      "name": "Stylish Jacket",
+      "price": 99.99,
+      "image": "https://picsum.photos/300/200?image=114",
+      "label": "Best Seller",
+      "description": "Add a touch of style to your outfit with our stylish jacket. It's made from high-quality materials and features a modern design that will never go out of style.",
+      "category": "Clothing"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Clothing"
+    },
+    {
+      "id": 3,
+      "name": "Home & Garden"
+    },
+    {
+      "id": 4,
+      "name": "Sports & Outdoors"
+    },
+    {
+      "id": 5,
+      "name": "Jewelry & Watches"
+    }
+  ],
+  "cart": [],
+  "wishlist": [],
+  "orders": []
+}

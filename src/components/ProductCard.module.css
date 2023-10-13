@@ -1,0 +1,117 @@
+.productContainer {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.productLabel {
+  position: absolute;
+  background-color: #388e3c;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  z-index: 1;
+  transform: rotate(-45deg);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+  width: 140px;
+  text-align: center;
+  top: 20px;
+  left: -35px;
+}
+
+.productImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 12px;
+
+  .productImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.productInfo {
+  padding: 0 12px;
+  margin-bottom: 12px;
+
+  .nameAndPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .productName {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .productDescription {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .productPrice {
+    font-size: 18px;
+    font-weight: 700;
+    color: #388e3c;
+  }
+}
+
+.productActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  .addToCardBtn {
+    background-color: var(--main-btn-bg-clr);
+    color: #fff;
+    padding: var(--main-btn-padding);
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--main-transition);
+    border: 1px solid var(--main-btn-border-clr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    &:hover {
+      background-color: var(--main-btn-bg-clr-hover);
+      border-color: var(--main-btn-border-clr-hover);
+    }
+
+    &:active {
+      background-color: var(--main-btn-bg-clr-active);
+      border-color: var(--main-btn-border-clr-active);
+    }
+  }
+
+  .addToCardIcon {
+    font-size: 20px;
+  }
+}

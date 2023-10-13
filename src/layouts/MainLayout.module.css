@@ -1,0 +1,5 @@
+.mainContent {
+  min-height: calc(100vh - 60px - 80px);
+  background-color: inherit;
+  padding-top: 12px;
+}
