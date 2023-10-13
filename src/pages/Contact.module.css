@@ -1,0 +1,127 @@
+.contactContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding-top: 80px;
+  padding-bottom: 30px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contactTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.contactText {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  max-width: 400px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+
+  @media (max-width: 320px) {
+    width: 100%;
+  }
+}
+
+.contactFormInputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 16px;
+
+  > label {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  > input {
+    width: 100%;
+    height: var(--main-input-height);
+    padding: var(--main-input-padding);
+    border: var(--main-input-border);
+    border-radius: var(--main-input-border-radius);
+    font-size: var(--main-input-font-size);
+    font-weight: var(--main-input-font-weight);
+    outline: none;
+    transition: var(--main-input-transition);
+    background-color: var(--main-input-background-color);
+
+    &:hover {
+      border: var(--main-input-border-hover);
+    }
+
+    &:focus {
+      border: var(--main-input-border-focus);
+      background-color: var(--main-input-background-color-focus);
+    }
+  }
+
+  > textarea {
+    width: 100%;
+    height: 180px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: var(--main-input-font-size);
+    font-weight: var(--main-input-font-weight);
+    outline: none;
+    transition: var(--main-input-transition);
+    background-color: var(--main-input-background-color);
+    resize: vertical;
+
+    &::placeholder {
+      font-size: var(--main-input-font-size);
+      font-weight: var(--main-input-font-weight);
+    }
+
+    &:hover {
+      border: var(--main-input-border-hover);
+    }
+
+    &:focus {
+      border: var(--main-input-border-focus);
+      background-color: var(--main-input-background-color-focus);
+    }
+  }
+}
+
+.submitButton {
+  width: 100%;
+  height: 40px;
+  margin-top: 16px;
+  border: 1px solid var(--main-btn-clr);
+  border-radius: 4px;
+  background-color: var(--main-btn-clr);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  cursor: pointer;
+  transition: var(--main-btn-transition);
+
+  &:hover {
+    background-color: #fff;
+    color: var(--main-btn-clr);
+  }
+}

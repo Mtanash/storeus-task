@@ -85,7 +85,7 @@
   margin-bottom: 12px;
 
   .addToCardBtn {
-    background-color: var(--main-btn-bg-clr);
+    background-color: var(--main-btn-clr);
     color: #fff;
     padding: var(--main-btn-padding);
     border-radius: 4px;
@@ -93,21 +93,16 @@
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
-    transition: var(--main-transition);
-    border: 1px solid var(--main-btn-border-clr);
+    transition: var(--main-btn-transition);
+    border: 1px solid var(--main-btn-clr);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
 
     &:hover {
-      background-color: var(--main-btn-bg-clr-hover);
-      border-color: var(--main-btn-border-clr-hover);
-    }
-
-    &:active {
-      background-color: var(--main-btn-bg-clr-active);
-      border-color: var(--main-btn-border-clr-active);
+      background-color: var(--main-btn-clr-hover);
+      border-color: var(--main-btn-clr-hover);
     }
   }
 

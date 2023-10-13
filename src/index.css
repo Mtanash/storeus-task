@@ -18,29 +18,32 @@
 
   --main-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-  --main-btn-clr: #388e3c;
-  --main-btn-clr-hover: #1b5e20;
-  --main-btn-clr-active: #1b5e20;
-  --main-btn-clr-disabled: #c8e6c9;
-  --main-btn-clr-disabled-hover: #a5d6a7;
+  --main-btn-clr: #646cff;
+  --main-btn-clr-hover: #3f51b5;
+  --main-btn-clr-disabled: #c5cae9;
 
-  --main-btn-bg-clr: #388e3c;
-  --main-btn-bg-clr-hover: #1b5e20;
-  --main-btn-bg-clr-active: #1b5e20;
-  --main-btn-bg-clr-disabled: #c8e6c9;
-  --main-btn-bg-clr-disabled-hover: #a5d6a7;
+  --main-btn-transition: all 0.2s ease-in-out;
 
-  --main-btn-border-clr: #388e3c;
-  --main-btn-border-clr-hover: #1b5e20;
-  --main-btn-border-clr-active: #1b5e20;
-  --main-btn-border-clr-disabled: #c8e6c9;
-  --main-btn-border-clr-disabled-hover: #a5d6a7;
+  --main-btn-bg-clr: #fff;
 
   --main-btn-font-size: 1.6rem;
   --main-btn-font-weight: 500;
   --main-btn-line-height: 1.5;
   --main-btn-border-radius: 4px;
   --main-btn-padding: 8px 16px;
+
+  --main-input-font-size: 15px;
+  --main-input-font-weight: 400;
+  --main-input-line-height: 1.5;
+  --main-input-border-radius: 4px;
+  --main-input-padding: 8px 16px;
+  --main-input-height: 40px;
+  --main-input-border: 1px solid #ccc;
+  --main-input-border-focus: 1px solid #646cff;
+  --main-input-border-hover: 1px solid #646cff8a;
+  --main-input-background-color: #fff;
+  --main-input-background-color-focus: #646cff2a;
+  --main-input-transition: all 0.2s ease-in-out;
 }
 
 *,
