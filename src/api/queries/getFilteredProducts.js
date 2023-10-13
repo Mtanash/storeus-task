@@ -16,6 +16,7 @@ const getFilteredProducts = async (filter) => {
     .join("&");
 
   const response = await axiosInstance.get(`/products?${filterString}`);
+
   return response.data;
 };
 

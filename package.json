@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start:server": "json-server --watch DB/db.json --port 3001"
+    "start:server": "json-server --watch DB/db.json --port 3001 --delay 1000",
+    "start:server:delay": "json-server --watch DB/db.json --port 3001 --delay 1500"
   },
   "dependencies": {
     "axios": "^1.5.1",

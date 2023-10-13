@@ -7,6 +7,7 @@ import styles from "./TopProductsCarousel.module.css";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
+import LoadingProductCard from "./LoadingProductCard";
 import ProductCard from "./ProductCard";
 import Container from "./UI/Container";
 
@@ -16,8 +17,6 @@ const TopProductsCarousel = () => {
     error,
     isFetching,
   } = useRequest(getFilteredProducts({ label: "Best Seller" }));
-
-  if (isFetching) return <div>Loading...</div>;
 
   if (error) return <div>Error...</div>;
 
@@ -41,15 +40,23 @@ const TopProductsCarousel = () => {
             },
           }}
         >
-          {products?.map((product) => (
-            <SwiperSlide key={product.id}>
-              <ProductCard
-                product={product}
-                displayLabel
-                style={{ margin: "0 auto" }}
-              />
-            </SwiperSlide>
-          ))}
+          {!isFetching &&
+            products?.map((product) => (
+              <SwiperSlide key={product.id}>
+                <ProductCard
+                  product={product}
+                  displayLabel
+                  style={{ margin: "0 auto" }}
+                />
+              </SwiperSlide>
+            ))}
+
+          {isFetching &&
+            [...Array(3)].map((_, index) => (
+              <SwiperSlide key={index}>
+                <LoadingProductCard />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
     </Container>

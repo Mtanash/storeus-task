@@ -10,15 +10,13 @@ const Products = () => {
     isFetching,
   } = useRequest(getFilteredProducts({}));
 
-  if (isFetching) {
-    return <div>Loading...</div>;
-  }
   if (error) {
     return <div>Something went wrong</div>;
   }
+
   return (
     <Container>
-      <ProductsList products={products} />
+      <ProductsList products={products} loading={isFetching} />
     </Container>
   );
 };
