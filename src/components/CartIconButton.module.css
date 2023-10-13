@@ -4,6 +4,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
+  position: relative;
 }
 
 .cartButton {
@@ -51,13 +52,14 @@
 .cartDropdown {
   position: absolute;
   top: 60px;
+  right: 0;
   width: 300px;
   height: 400px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
-  z-index: 100;
+  z-index: 3;
   transition: var(--main-transition);
 }
 
@@ -66,10 +68,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 15px;
-  background-color: var(--main-text-color);
+  background-color: var(--main-btn-clr);
   color: #fff;
   font-size: 14px;
   font-weight: 700;
+  height: 50px;
 }
 
 .cartDropdownTitle {
@@ -95,7 +98,7 @@
 
 .cartDropdownBody {
   padding: 10px 15px;
-  min-height: calc(100% - 110px);
+  min-height: calc(100% - 112px);
   overflow-y: auto;
 }
 
@@ -110,15 +113,15 @@
 }
 
 .cartDropdownFooter {
+  border-top: 1px solid #ccc;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
   padding: 10px 15px;
-  background-color: var(--main-text-color);
   font-size: 14px;
   font-weight: 700;
-  color: #fff;
+  height: 62px;
 }
 
 .cartDropdownCheckoutButton {
@@ -130,12 +133,17 @@
   background-color: #fff;
   font-size: 14px;
   font-weight: 700;
-  border: none;
+  border: 1px solid var(--main-btn-clr);
+  color: var(--main-btn-clr);
   outline: none;
   cursor: pointer;
   transition: var(--main-transition);
-  color: var(--main-text-color);
   border-radius: 5px;
+
+  &:hover {
+    background-color: var(--main-btn-clr);
+    color: #fff;
+  }
 }
 
 .cartDropdownTotal {

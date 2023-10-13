@@ -35,7 +35,11 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <Container>
+      <Container
+        style={{
+          overflowX: "unset",
+        }}
+      >
         <div className={styles.headerContent}>
           <h1 className={styles.logo} onClick={handleLogoClick}>
             Store Online

@@ -25,7 +25,7 @@ const CartIconButton = () => {
   const cartIsEmpty = items.length === 0;
 
   const handleCartButtonClick = () => {
-    toggleCartDropdown(!cartDropdownIsOpen);
+    toggleCartDropdown((prevState) => !prevState);
   };
 
   useEffect(() => {
@@ -45,6 +45,11 @@ const CartIconButton = () => {
     };
   }, []);
 
+  const handleCheckoutClick = () => {
+    toggleCartDropdown(false);
+    alert("Checkout");
+  };
+
   return (
     <div className={styles.cartIconButtonContainer}>
       <button className={styles.cartButton} onClick={handleCartButtonClick}>
@@ -58,10 +63,10 @@ const CartIconButton = () => {
         {cartDropdownIsOpen && (
           <motion.div
             key="cart-dropdown"
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: -600 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.1 }}
+            exit={{ opacity: 0, y: -600 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
             className={styles.cartDropdown}
             ref={cartDropDownRef}
           >
@@ -127,7 +132,10 @@ const CartIconButton = () => {
             </div>
 
             <div className={styles.cartDropdownFooter}>
-              <button className={styles.cartDropdownCheckoutButton}>
+              <button
+                className={styles.cartDropdownCheckoutButton}
+                onClick={handleCheckoutClick}
+              >
                 Checkout
               </button>
 
