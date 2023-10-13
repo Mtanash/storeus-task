@@ -1,6 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import {
+  AiOutlineMinusCircle,
+  AiOutlinePlusCircle,
+  AiOutlineShoppingCart,
+} from "react-icons/ai";
 import { getCartTotalItems, getCartTotalPrice } from "../helpers/cart";
 import useCartStore from "../stores/cartStore";
 import styles from "./CartIconButton.module.css";
@@ -9,9 +13,10 @@ const CartIconButton = () => {
   const cartDropDownRef = useRef(null);
   const [cartDropdownIsOpen, toggleCartDropdown] = useState(false);
 
-  const { items, removeProductFromCart } = useCartStore((state) => ({
+  const { items, addToCart, removeFromCart } = useCartStore((state) => ({
     items: state.items,
-    removeProductFromCart: state.removeProductFromCart,
+    addToCart: state.addToCart,
+    removeFromCart: state.removeFromCart,
   }));
 
   const totalCartItems = useMemo(() => {
@@ -114,12 +119,24 @@ const CartIconButton = () => {
                           </span>
                         </div>
 
-                        <button
-                          className={styles.cartDropdownItemRemoveButton}
-                          onClick={() => removeProductFromCart(product)}
-                        >
-                          &times;
-                        </button>
+                        <div className={styles.cartActionButtons}>
+                          <button
+                            className={styles.cartActionButton}
+                            onClick={() => addToCart(product)}
+                          >
+                            <AiOutlinePlusCircle
+                              className={styles.cartActionButtonIcon}
+                            />
+                          </button>
+                          <button
+                            className={styles.cartActionButton}
+                            onClick={() => removeFromCart(product)}
+                          >
+                            <AiOutlineMinusCircle
+                              className={styles.cartActionButtonIcon}
+                            />
+                          </button>
+                        </div>
 
                         <div className={styles.cartDropdownItemTotal}>
                           ${(price * quantity).toFixed(2)}
