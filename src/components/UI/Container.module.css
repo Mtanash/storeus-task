@@ -4,6 +4,7 @@
   height: 100%;
   margin: 0 auto;
   padding: 0 15px;
+  overflow-x: hidden;
 
   @media (max-width: 768px) {
     padding: 0 10px;
@@ -11,9 +12,5 @@
 
   @media (max-width: 576px) {
     padding: 0 5px;
-  }
-
-  @media (max-width: 320px) {
-    padding: 0 2px;
   }
 }

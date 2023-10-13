@@ -32,6 +32,9 @@ const TopProductsCarousel = () => {
           navigation={true}
           loop
           breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
             768: {
               slidesPerView: 2,
             },
