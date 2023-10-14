@@ -2,7 +2,26 @@
 
 ## Description
 
-This project is a simple e-commerce application that displays a list of products and allows the user to add them to a shopping cart. The user can also view the shopping cart and remove items from it. The application is built using React.js. The application is responsive and works on mobile devices as well.
+This project is a simple e-commerce application that displays a list of products and allows the user to add them to a shopping cart. The user can also view the shopping cart and remove items from it. The application is built using React.js. The application is responsive and works on mobile devices as well. The application persists the shopping cart data using the browser's local storage. The application also uses a fake API to fetch the products data.
+Could not deploy the application due to the fake API.
+
+I used Zustand for state management because it is a simple and lightweight state management library that is easy to use and does not require a lot of boilerplate code.
+
+I used CSS Modules for styling because it is a simple and easy to use solution for styling React components. It also allows you to write CSS code that is scoped to a specific component and does not affect other components.
+
+I used JSON Server to create a fake API to fetch the products data from. I used Axios to make the HTTP requests to the API with the help of custom hook that I created (useRequest).
+
+I used React Router to handle the routing in the application and to create the navigation bar.
+
+I used React Icons to add icons to the application.
+
+I used React Toastify to display toast messages to the user.
+
+I used React Select to create a custom select component.
+
+I used Swiper.js to create a custom slider component to display the products (on the home page).
+
+I used Framer Motion to add animations to the application.
 
 ## Installation
 
