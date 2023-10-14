@@ -37,7 +37,8 @@ const CartIconButton = () => {
     const handleClickOutside = (e) => {
       if (
         cartDropDownRef.current &&
-        !cartDropDownRef.current.contains(e.target)
+        !cartDropDownRef.current.contains(e.target) &&
+        !e.target.classList.contains(styles.cartButtonIcon)
       ) {
         toggleCartDropdown(false);
       }
