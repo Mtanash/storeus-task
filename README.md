@@ -23,6 +23,8 @@ I used Swiper.js to create a custom slider component to display the products (on
 
 I used Framer Motion to add animations to the application.
 
+I've used some images from storeus.com, sorry for that 😅😅
+
 ## Installation
 
 _Make sure you have Node.js installed on your machine version 16 or higher (18 is recommended)._
